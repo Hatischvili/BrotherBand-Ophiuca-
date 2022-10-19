@@ -1,7 +1,18 @@
 [MASTER]
 
-disable=
-    C0114 #missing-module-docstring
+disable=C0114,  # missing-module-docstring
+        C0115,  # missing class docstring (missing-class-docstring)
+        C0116,  # missing function or method docstring (missing-function-docstring)
+        R1716,  # Simplify chained comparison between the operands (chained-comparison)
+        E0401,  # Unable to import 
+        C0325,  # Unnecessary parens after 'if' keyword (superfluous-parens)
+        W0105,  # pointless-string-statement
+        W0703,  # broad-except
+        R0022,
+        W0012,
+        W0311,
+        SC200
+
 
 # Specify a configuration file.
 #rcfile=
@@ -403,3 +414,6 @@ exclude-protected=_asdict,_fields,_replace,_source,_make
 # Exceptions that will emit a warning when being caught. Defaults to
 # "Exception"
 overgeneral-exceptions=Exception
+
+
+good-names = id, app, db
