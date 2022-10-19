@@ -6,11 +6,11 @@ from src.domain.entities import Chat, Solicitations, Bonds
 
 @dataclass
 class User:
-    user_id: str = ""
+    id: str = ""
     password: str = ""
     date_of_birth: str = ""
     secret: str = ""
-    interests: List = []
+    interests: List = [str]
     encryption_user = ""
     brothers = Bonds
     chats = Chat
