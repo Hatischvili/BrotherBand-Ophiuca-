@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from uuid import UUID
+
 from src.domain.exceptions.domain_validation_error import DomainValidationError
+
 
 @dataclass
 class UUIDValidator:
@@ -10,4 +12,6 @@ class UUIDValidator:
         try:
             _ = UUID(value)
         except ValueError as exc:
-            raise DomainValidationError(f"Field {field} must be an UUID. [value={value}]") from exc
+            raise DomainValidationError(
+                f"Field {field} must be an UUID. [value={value}]"
+            ) from exc

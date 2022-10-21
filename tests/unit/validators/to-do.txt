@@ -1,3 +1,2 @@
 valida strings
 valida o tamanho dos arrays
-valida a id (usar hashlib?)

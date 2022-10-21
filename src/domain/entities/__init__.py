@@ -1,4 +1,3 @@
-from .bonds import Bonds
-from .chat import Chat
-from .solicitations import Solicitations
+from .bands import Bands
+from .chat import Chats
 from .user import User
