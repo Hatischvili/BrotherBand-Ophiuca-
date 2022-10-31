@@ -8,6 +8,7 @@ from domain.validators import (ListLimiterValidator, MandatoryStringValidator,
 @dataclass
 class User:
     id: str = ""
+    user_name: str = ""
     password: str = ""
     date_of_birth: str = ""
     secret: str = ""
@@ -19,9 +20,11 @@ class User:
         UUIDValidator.validate(self.id, "id")
         PasswordValidator.validate(self.password)
         ListLimiterValidator.validate(self.interests)
+        MandatoryStringValidator.validate(self.user_name, "Username")
         MandatoryStringValidator.validate(self.secret, "Secret")
         MandatoryStringValidator.validate(self.date_of_birth, "Date of Birth")
         MandatoryStringValidator.validate(self.registered_in, "Registered in")
+        
 
     def add_interst(self, interest):
         if interest <= 5:
