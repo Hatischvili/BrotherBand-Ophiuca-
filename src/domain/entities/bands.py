@@ -1,8 +1,6 @@
 from dataclasses import dataclass
 from typing import List
-
-from ..Enums import BrotherbandSolicitationEnum
-
+from src.domain.enums.brotherband_solicitation_enum import BrotherbandSolicitationEnum
 
 @dataclass
 class Bonds:
@@ -17,3 +15,4 @@ class Bands:
     bonds = Bonds
     bands: List = [str]
     encryption: str = ""
+

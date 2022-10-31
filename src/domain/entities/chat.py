@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from ..Enums import MessageStatusEnum
+from src.domain.enums import MessageStatusEnum
 
 
 @dataclass
