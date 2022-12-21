@@ -1,2 +1,2 @@
-from .brotherband_solicitation_enum import BrotherbandSolicitationEnum
+from .brotherband_request_enum import BrotherbandRequestEnum
 from .message_read_status_enum import MessageStatusEnum

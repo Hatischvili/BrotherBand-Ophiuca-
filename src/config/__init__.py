@@ -1,0 +1,1 @@
+from .config_atributes import NAME_MAX_LEN, NAME_MIN_LEN, EMAL_MAX_LEN, PASSWORD_MAX_LEN

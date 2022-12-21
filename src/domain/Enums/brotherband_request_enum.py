@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 
-class BrotherbandSolicitationEnum(IntEnum):
+class BrotherbandRequestEnum(IntEnum):
     EMPTY = 0
     SENT = 1
     RECIEVED = 2

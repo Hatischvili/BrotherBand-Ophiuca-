@@ -2,7 +2,7 @@ from dataclasses import field
 from typing import Any
 from uuid import uuid4
 import pytest
-from src.domain.validators.uuid_validator import UUIDValidator
+from src.domain.validators import UUIDValidator
 
 class TestUUIDValidador:
     field = 'UUID Field'
