@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime 
+from datetime import date
 from typing import List
 from uuid import UUID, uuid4
 
@@ -7,9 +8,17 @@ from uuid import UUID, uuid4
 class User:
     id: UUID = uuid4()
     user_name: str = ""
+    full_name: str = ""
     user_email: str = ""
     password: str = ""
     secret: str = ""
     interests: List[str] = []
-    date_of_birth: datetime = datetime.now()
+    birthday: date = date.today()
     registered_in: datetime = datetime.now()
+
+
+
+    @property
+    def user_age(self):
+        return (date.today() - self.birthday) / 365
+    
