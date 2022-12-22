@@ -16,9 +16,10 @@ class User:
     birthday: date = date.today()
     registered_in: datetime = datetime.now()
 
-
-
     @property
     def user_age(self):
         return (date.today() - self.birthday) / 365
+
+    def validade(self):
+        pass
     
