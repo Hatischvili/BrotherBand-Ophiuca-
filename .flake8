@@ -1,5 +1,5 @@
 [flake8]
-ignore = E722, W503, WPS130
+ignore = E722, W503, WPS130, E115, E303, E265
 max-line-length = 120
 per-file-ignores = __init__.py:F401
 good-names = id, app, db, src

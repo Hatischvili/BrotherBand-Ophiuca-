@@ -1,18 +1,26 @@
 [MASTER]
 
-disable=C0114,  # missing-module-docstring
-        C0115,  # missing class docstring (missing-class-docstring)
-        C0116,  # missing function or method docstring (missing-function-docstring)
-        R1716,  # Simplify chained comparison between the operands (chained-comparison)
-        E0401,  # Unable to import 
-        C0325,  # Unnecessary parens after 'if' keyword (superfluous-parens)
-        W0105,  # pointless-string-statement
-        W0703,  # broad-except
+disable=C0114,
+        C0115, 
+        C0116,  
+        R1716,  
+        E0401,  
+        C0325, 
+        W0105, 
+        W0703,  
         R0022,
         W0012,
         W0311,
-        SC200
+        SC200,
+        W0622,  
+        R0801,  
+        R0913,
+        F0011,
 
+good-names = id, app, db
+
+[FORMAT]
+max-line-length=250
 
 # Specify a configuration file.
 #rcfile=
