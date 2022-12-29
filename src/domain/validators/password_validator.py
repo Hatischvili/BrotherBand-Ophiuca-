@@ -11,7 +11,7 @@ class PasswordValidator:
         DomainValidationError.when(password is None, "Empty password. [password=]")
         DomainValidationError.when(not isinstance(password, str), f"Invalid password.[password={password}] must be a string")
         password = password.strip()
-        regex = re.compile(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$")
+        regex = re.compile(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{10,}$")
         validator = regex.findall(password)
         DomainValidationError.when(password not in validator,f"""
                                    Invalid password. [password={password}].
