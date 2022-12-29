@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from uuid import UUID
 
-from src.domain.exceptions.domain_validation_error import DomainValidationError
+from src.domain.exceptions import DomainValidationError
 
 
 @dataclass

@@ -1,6 +1,6 @@
 from typing import Any
 import pytest
-from src.domain.validators.mandatory_string_validator import MandatoryStringValidator
+from src.domain.validators import MandatoryStringValidator
 from src.config.config_atributes import NAME_MAX_LEN, NAME_MIN_LEN
 
 class TestMandatoryStringValidator():

@@ -1,7 +1,7 @@
 from typing import Any
 import pytest
 
-from src.domain.validators.email_validator import EmailValidator
+from src.domain.validators import EmailValidator
 
 
 class TestEmailValidator:

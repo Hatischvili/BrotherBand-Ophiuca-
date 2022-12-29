@@ -1,7 +1,7 @@
 import re
 from typing import Any
 
-from src.domain.exceptions.domain_validation_error import DomainValidationError
+from src.domain.exceptions import DomainValidationError
 
 
 class EmailValidator:
