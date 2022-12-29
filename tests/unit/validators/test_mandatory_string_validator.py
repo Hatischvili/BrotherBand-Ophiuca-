@@ -44,7 +44,7 @@ class TestMandatoryStringValidator():
         assert str(erro.value) == msg_erro
         
     
-    def test_validate_mandatory_stringv_alidator_ok(self):
+    def test_validate_mandatory_string_validator_ok(self):
         value = "Clarice"
         field_name = "Usernamme"
 
