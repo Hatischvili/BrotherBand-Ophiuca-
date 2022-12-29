@@ -1,0 +1,8 @@
+isort
+pylint
+flake8
+pyflakes
+pycodestyle
+Bandit
+MyPy
+Black
