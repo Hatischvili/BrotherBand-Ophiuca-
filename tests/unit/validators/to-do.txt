@@ -1,3 +1,4 @@
-Data 
-Timestamp
-valida o tamanho dos arrays
+Data
+Enum
+Lista limtada
+Timestap
