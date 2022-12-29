@@ -12,6 +12,4 @@ class UUIDValidator:
         try:
             _ = UUID(value)
         except ValueError as exc:
-            raise DomainValidationError(
-                f"Field {field} must be an UUID. [value={value}]"
-            ) from exc
+            raise DomainValidationError(f"Field {field} must be an UUID. [value={value}]") from exc

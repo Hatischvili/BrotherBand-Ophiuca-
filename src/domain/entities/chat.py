@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 from uuid import UUID, uuid4
+
 from .message import Message
 
 
@@ -10,5 +11,3 @@ class Chat:
     participant_1: UUID = uuid4()
     participant_2: UUID = uuid4()
     messages: List[Message] = []
-
-

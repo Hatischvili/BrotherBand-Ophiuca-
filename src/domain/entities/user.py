@@ -1,8 +1,8 @@
 from dataclasses import dataclass
-from datetime import datetime 
-from datetime import date
+from datetime import date, datetime
 from typing import List
 from uuid import UUID, uuid4
+
 
 @dataclass
 class User:
@@ -22,4 +22,3 @@ class User:
 
     def validade(self):
         pass
-    

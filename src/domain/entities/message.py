@@ -4,6 +4,7 @@ from uuid import UUID, uuid4
 
 from src.domain.enums import MessageStatusEnum
 
+
 @dataclass
 class Message:
     message_id: UUID = uuid4()

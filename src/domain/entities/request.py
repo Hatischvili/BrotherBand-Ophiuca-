@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from uuid import UUID, uuid4
+
 from domain.enums import BrotherbandRequestEnum
+
 
 @dataclass
 class Request:
