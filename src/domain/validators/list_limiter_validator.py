@@ -7,5 +7,5 @@ from src.domain.exceptions import DomainValidationError
 @dataclass
 class ListLimiterValidator:
     @staticmethod
-    def validate(list: List, field_name: str):
-        DomainValidationError.when(len(list) > 5, f"{field_name} must have only up to 6 items.")
+    def validate(list: List, field_name: str) -> None:
+        DomainValidationError.when(len(list) > 6, f"{field_name} must have only up to 6 items")

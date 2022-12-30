@@ -8,7 +8,8 @@ from src.domain.exceptions import DomainValidationError
 class UUIDValidator:
     @staticmethod
     def validate(value: str, field: str) -> None:
-        DomainValidationError.when(value is None, f"Field {field} cannot be None.")
+        DomainValidationError.when(value is None, f"Field {field} must not be of None type.")
+
         try:
             _ = UUID(value)
         except ValueError as exc:

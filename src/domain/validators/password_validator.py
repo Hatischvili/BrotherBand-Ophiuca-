@@ -7,22 +7,15 @@ from src.domain.exceptions import DomainValidationError
 @dataclass
 class PasswordValidator:
     @staticmethod
-    def validate(password: str) -> None:
-        DomainValidationError.when(password is None, "Empty password. [password=]")
-        DomainValidationError.when(not isinstance(password, str), f"Invalid password.[password={password}] must be a string")
-        
-        password = password.strip()
-        regex = re.compile(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{10,}$")
-        validator = regex.findall(password)
-        
-        DomainValidationError.when(
-            password not in validator,
-            f"""
-                                   Invalid password. [password={password}].
-                                             Your password:
-                                   • Should contain at least a capital letter
-                                   • Should contain at least a small letter
-                                   • Should contain at least a number
-                                   • Should contain at least a special character
-                                   • Should be at least 10 characters of length""",
-        )
+    def validate(value: str) -> None:
+        DomainValidationError.when(value is None, "Password must not be of None type")
+        DomainValidationError.when(not isinstance(value, str), f"Invalid password. [value={value}] must be a string")
+
+        value = value.strip()
+
+        DomainValidationError.when(value == '', "Password must not be empty")
+
+        regex = re.compile(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{12,}$")
+        validator = regex.findall(value)
+
+        DomainValidationError.when(value not in validator,f"Invalid password. [value={value}] Your password: • Must contain at least a capital letter • Must contain at least a small letter • Must contain at least a number • Must contain at least a special character • Must be at least 12 characters long")

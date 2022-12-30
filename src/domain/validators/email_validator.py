@@ -6,11 +6,14 @@ from src.domain.exceptions import DomainValidationError
 
 class EmailValidator:
     @staticmethod
-    def validate(value: Any):
-        DomainValidationError.when(value is None, f"E-mail must not be of None type. [value={value}]")
+    def validate(value: Any) -> None:
+        DomainValidationError.when(value is None, "E-mail must not be of None type")
         DomainValidationError.when(not isinstance(value, str), f"Invalid E-mail. [value={value}] must be a string")
 
         value = value.strip()
+
+        DomainValidationError.when(value == '', "E-mail must not be empty")
+
         email_regex = re.compile(r"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
         email_validator = email_regex.findall(value)
 
