@@ -18,24 +18,21 @@ class TestUUIDValidador:
         )
     )
     def test_validate_uuid_validator_error(self, uuid: Any, msg_error: str):
-        #Arrange
-        uuid_test = uuid
-
-        #act
+        # Act
         with pytest.raises(Exception) as error:
-            UUIDValidator.validate(uuid_test, self.field)
+            UUIDValidator.validate(uuid, self.field)
 
-        #assert
+        # Assert
         assert str(error.value) == msg_error
 
     def test_validate_uuid_validator_ok(self):
-        #Arrange
+        # Arrange
         uuid = str(uuid4())
 
-        #act
+        # Act
         UUIDValidator.validate(uuid, self.field)
 
-        #assert
+        # Assert
         assert True
 
 

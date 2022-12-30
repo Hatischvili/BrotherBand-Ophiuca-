@@ -30,10 +30,10 @@ class TestMandatoryStringValidator():
         )
 
     def test_validate_mandatory_string_validator_name_maximum_size_error(self, value:Any, msg_erro: str):
-
+        # Arrange
         field_name = 'String Validator'
         max_length = NAME_MAX_LEN
-        min_length =NAME_MIN_LEN
+        min_length = NAME_MIN_LEN
         strigmax = MandatoryStringValidator()
 
         # Act
@@ -45,7 +45,8 @@ class TestMandatoryStringValidator():
         
     
     def test_validate_mandatory_string_validator_ok(self):
-        value = "Clarice"
+        # Arrange
+        value = "Hoshikawa"
         field_name = "Username"
 
         # Act
