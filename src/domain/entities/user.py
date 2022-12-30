@@ -7,11 +7,11 @@ from uuid import UUID, uuid4
 @dataclass
 class User:
     id: UUID = uuid4()
-    user_name: str = ""
-    full_name: str = ""
-    user_email: str = ""
-    password: str = ""
-    secret: str = ""
+    user_name: str = ''
+    full_name: str = ''
+    user_email: str = ''
+    password: str = ''
+    secret: str = ''
     interests: List[str] = []
     birthday: date = date.today()
     registered_in: datetime = datetime.now()

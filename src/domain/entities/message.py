@@ -10,6 +10,6 @@ class Message:
     message_id: UUID = uuid4()
     sender_id: UUID = uuid4()
     recipient_id: UUID = uuid4()
-    body: str = ""
+    body: str = ''
     timestamp: datetime = datetime.now()
     status: MessageStatusEnum = MessageStatusEnum.EMPTY

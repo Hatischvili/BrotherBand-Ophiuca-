@@ -14,4 +14,4 @@ class EmailValidator:
         email_regex = re.compile(r"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
         email_validator = email_regex.findall(value)
 
-        DomainValidationError.when(value not in email_validator, f"Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value={value}]")
+        DomainValidationError.when(value not in email_validator, f"Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value={value}]")

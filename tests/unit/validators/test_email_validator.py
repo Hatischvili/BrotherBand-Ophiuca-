@@ -34,16 +34,16 @@ class TestEmailValidator:
         
     @pytest.mark.parametrize(
     ("value", "error_msg"),
-    [("test", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=test]"),
-    ("test@", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=test@]"),
-    ("test@test", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=test@test]"),
-    ("@test", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=@test]"),
-    ("@test.com", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=@test.com]"),
-    ("@test.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=@test.br]"),
-    ("@test.com.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=@test.com.br]"),
-    ("test.com", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=test.com]"),
-    ("test.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=test.br]"),
-    ("test.com.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional], [value=test.com.br]")])
+    [("test", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test]"),
+    ("test@", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test@]"),
+    ("test@test", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test@test]"),
+    ("@test", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=@test]"),
+    ("@test.com", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=@test.com]"),
+    ("@test.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=@test.br]"),
+    ("@test.com.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=@test.com.br]"),
+    ("test.com", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test.com]"),
+    ("test.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test.br]"),
+    ("test.com.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test.com.br]")])
     
     def test_email_validator_wrong_format_error(self, value: Any, error_msg: str):
         # Act

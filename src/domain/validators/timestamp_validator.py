@@ -14,4 +14,4 @@ class TimestampValidator:
         timestamp_regex = re.compile(r"([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) ([0-9]{2}):([0-9]{2}):([0-9]{2}).([0-9]{6})")
         timestamp_validator = timestamp_regex.findall(value)
 
-        DomainValidationError.when(value not in timestamp_validator, f"Invalid format. Timestamp must be in format YYYY-MM-DD YY:MM:SS.μμμμμμ, [value={value}]")
+        DomainValidationError.when(value not in timestamp_validator, f"Invalid format. Timestamp must be in format YYYY-MM-DD YY:MM:SS.μμμμμμ. [value={value}]")
