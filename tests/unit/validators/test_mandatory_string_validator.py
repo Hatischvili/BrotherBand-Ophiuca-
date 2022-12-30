@@ -13,7 +13,7 @@ class TestMandatoryStringValidator():
             ("", f"{field_name} must not be empty"),
         )
     )
-    def test_validate_mandatorystringvalidator_error(self, name:Any, msg_erro: str):
+    def test_validate_mandatory_string_validator_error(self, name:Any, msg_erro: str):
 
         # Act
         with pytest.raises(Exception) as erro:
@@ -24,12 +24,12 @@ class TestMandatoryStringValidator():
 
     @pytest.mark.parametrize(
         ('value', 'msg_erro'), (
-            ("1"*(NAME_MAX_LEN+1), f"{field_name} maximum size is - {NAME_MAX_LEN}"),
-            ("1"*(NAME_MIN_LEN-1), f"{field_name} minimum size is - {NAME_MIN_LEN}")
+            ("1"*(NAME_MAX_LEN+1), f"{field_name} maximum size is: {NAME_MAX_LEN}"),
+            ("1"*(NAME_MIN_LEN-1), f"{field_name} minimum size is: {NAME_MIN_LEN}")
             )
         )
 
-    def test_validade_mandatory_string_validator_name_maximum_size_error(self, value:Any, msg_erro: str):
+    def test_validate_mandatory_string_validator_name_maximum_size_error(self, value:Any, msg_erro: str):
 
         field_name = 'String Validator'
         max_length = NAME_MAX_LEN
@@ -46,7 +46,7 @@ class TestMandatoryStringValidator():
     
     def test_validate_mandatory_string_validator_ok(self):
         value = "Clarice"
-        field_name = "Usernamme"
+        field_name = "Username"
 
         # Act
         MandatoryStringValidator.validate(value=value,field_name=field_name,max_length=NAME_MAX_LEN,min_length=NAME_MIN_LEN)

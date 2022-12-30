@@ -17,7 +17,7 @@ class TestUUIDValidador:
             ("32005609-d7fe-4621-8e05-01dedef8335", f"{default_error_message} [value=32005609-d7fe-4621-8e05-01dedef8335]")
         )
     )
-    def test_execute_uuid_error(self, uuid: Any, msg_error: str):
+    def test_validate_uuid_validator_error(self, uuid: Any, msg_error: str):
         #Arrange
         uuid_test = uuid
 
@@ -28,7 +28,7 @@ class TestUUIDValidador:
         #assert
         assert str(error.value) == msg_error
 
-    def test_execute_uuid_valido_ok(self):
+    def test_validate_uuid_validator_ok(self):
         #Arrange
         uuid = str(uuid4())
 

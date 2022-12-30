@@ -6,7 +6,7 @@ from src.domain.validators import EmailValidator
 
 class TestEmailValidator:
     
-    def test_email_validator_none_error(self):
+    def test_validate_email_validator_none_error(self):
         # Arrange
         test = None
 
@@ -24,7 +24,7 @@ class TestEmailValidator:
     (1.618033988749895, "Invalid E-mail. [value=1.618033988749895] must be a string"),
     (True, "Invalid E-mail. [value=True] must be a string")])
     
-    def test_email_validator_wrong_type_error(self, value: Any, error_msg: str):
+    def test_validate_email_validator_wrong_type_error(self, value: Any, error_msg: str):
         # Act
         with pytest.raises(Exception) as error:
             EmailValidator.validate(value)
@@ -45,7 +45,7 @@ class TestEmailValidator:
     ("test.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test.br]"),
     ("test.com.br", "Invalid format. E-mail must be in format [User@Domain.com.br[br=Optional]. [value=test.com.br]")])
     
-    def test_email_validator_wrong_format_error(self, value: Any, error_msg: str):
+    def test_validate_email_validator_wrong_format_error(self, value: Any, error_msg: str):
         # Act
         with pytest.raises(Exception) as error:
             EmailValidator.validate(value)
