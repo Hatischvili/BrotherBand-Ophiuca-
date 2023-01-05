@@ -1,5 +1,5 @@
 # BrotherBand-Ophiuca-
-A Python version of the original BrotherBand made using OOP, SOLID and Clean Architecture. A bit more snake-like.
+A Python version of the original BrotherBand made using OOP, SOLID, tests and Clean Architecture. A bit more snake-like.
 
 ![BB Ophiuca Logo](https://i.imgur.com/BZkZ3jb.png)
 
